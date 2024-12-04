@@ -5,8 +5,9 @@
     <% @events.each do |event| %>
       <div class="mb-10 p-5 card bg-base-100 shadow-xl">
       <figure>
-        <turbo-frame id="visual_image" src="/visual_images" loading="lazy">
-          <span class="loading loading-spinner loading-lg"></span>
+        <turbo-frame id="visual_image_<%= event.id %>" src="/visual_images/<%= event.id %>" loading="lazy">
+          <span class="loading loading-spinner loading-xs mr-1"></span>
+          <p class="text-center">NOW LOADING...</p>
         </turbo-frame>
       </figure>
         <div class="card-body">

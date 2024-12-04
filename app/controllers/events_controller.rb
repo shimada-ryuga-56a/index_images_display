@@ -4,5 +4,6 @@ class EventsController < ApplicationController
   end
 
   def image
+    @event = Event.find(params[:id])
   end
 end
