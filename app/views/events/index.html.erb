@@ -4,15 +4,12 @@
   <% if @events.present? %>
     <% @events.each do |event| %>
       <div class="mb-10 p-5 card bg-base-100 shadow-xl">
-        <figure>
-          <% if event.visual_image.attached? %>
-            <%= image_tag event.visual_image.variant(resize_to_fill: [400, 200], format: :webp) %>
-          <% else %>
-            <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="Shoes" />
-          <% end %>
-        </figure>
+      <figure>
+        <turbo-frame id="visual_image_<%= event.id %>" src="/visual_images/<%= event.id %>" loading="lazy">
+          <span class="loading loading-spinner loading-xs mr-1"></span>
+          <p class="text-center">NOW LOADING...</p>
+        </turbo-frame>
+      </figure>
         <div class="card-body">
           <h2 class="card-title">
             <%= event.name %>
