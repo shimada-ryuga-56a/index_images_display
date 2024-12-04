@@ -1,4 +1,6 @@
 class Event < ApplicationRecord
+  has_one_attached :visual_image
+
   validates :category, presence: true
   validates :name, presence: true
   validates :name_ruby, presence: true,
