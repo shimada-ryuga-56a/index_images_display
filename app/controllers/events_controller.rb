@@ -4,6 +4,6 @@ class EventsController < ApplicationController
   end
 
   def image
-    @event = Event.find(params[:id])
+    @event = Event.includes(visual_image_attachment: :blob).find(params[:id])
   end
 end
