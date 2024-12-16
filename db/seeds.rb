@@ -28,3 +28,4 @@ CSV.foreach('db/csv/discs.csv', headers: true) do |row|
     disc.release_date = row['release_date']
     disc.production_type = row['production_type']
   end
+end
