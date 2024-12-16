@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'events/index'
+  get 'discs/index'
   get '/visual_images/:id' => "events#image"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
