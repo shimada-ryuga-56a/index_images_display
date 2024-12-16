@@ -1,2 +1,4 @@
 <h1>Discs#index</h1>
-<p>Find me in app/views/discs/index.html.erb</p>
+<% @discs.each do |disc| %>
+  <p><%= disc.title %></p>
+<% end %>
